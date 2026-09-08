@@ -1,0 +1,54 @@
+# Agentic VDR Evaluator & Governance Pipeline Configuration
+
+server:
+  orchestrator_port: 8080
+  ai_engine_port: 8000
+  environment: "development"
+
+governance:
+  # Minimum grounding score required for automated approval (0.0 - 1.0)
+  min_grounding_score: 0.85
+  # Any discrepancy count strictly triggers Human-In-The-Loop gate
+  max_acceptable_discrepancies: 0
+  # Customer concentration % exceeding this threshold triggers Investment Committee Review
+  customer_concentration_threshold_pct: 25.0
+  # Review token expiration in minutes
+  review_token_ttl_minutes: 60
+  # Secret key for HMAC token signing
+  review_token_secret: "vdr-governance-super-secret-key-change-in-production"
+
+ai_engine:
+  # Mock mode enables running the full pipeline and adversarial test suite without active API keys
+  mock_mode: false
+  openai_api_key: "your-openai-api-key"
+  extractor_model: "gpt-4o"
+  critic_model: "gpt-4o"
+  temperature: 0.0
+
+azure_document_intelligence:
+  endpoint: "https://your-resource-name.cognitiveservices.azure.com/"
+  api_key: "your-azure-key"
+  model_id: "prebuilt-layout"
+
+pii_scrubber:
+  enabled: true
+  mask_format: "[REDACTED_{ENTITY}_{ID}]"
+  sensitive_entities:
+    - "PERSON"
+    - "EMAIL_ADDRESS"
+    - "PHONE_NUMBER"
+    - "US_SSN"
+    - "US_PASSPORT"
+    - "CREDIT_CARD"
+
+database:
+  postgres:
+    host: "localhost"
+    port: 5432
+    user: "vdr_user"
+    password: "vdr_password"
+    dbname: "vdr_governance"
+    sslmode: "disable"
+  snowflake_mock:
+    enabled: true
+    staging_dir: "./data/snowflake_staging"

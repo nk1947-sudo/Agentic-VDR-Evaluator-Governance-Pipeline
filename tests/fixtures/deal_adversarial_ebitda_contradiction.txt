@@ -1,0 +1,24 @@
+--- PAGE 1 ---
+Apex Logistics Software - Confidential Information Memorandum
+Executive Summary:
+Apex is the premier supply chain visibility software platform.
+Management Presentation: FY2023 Total Revenue reached $60.0M.
+Key Profitability Highlight: Management claims FY2023 adjusted EBITDA of $18.0M, demonstrating high operating leverage.
+
+--- PAGE 2 ---
+Operations & Tech Stack:
+Apex operates on a cloud-native AWS architecture with 99.99% uptime across 12,000 carrier endpoints.
+Product developments include AI-driven route optimization and automated billing reconciliations.
+
+--- PAGE 3 ---
+Commercial Overview:
+Customer retention remains healthy with gross churn under 6%.
+Top client account represents 18% of platform throughput.
+
+--- PAGE 4 ---
+Appendix: Audited Financial Statements & Footnotes:
+Note 4 (EBITDA Reconciliation):
+The adjusted EBITDA figure of $18.0M cited in executive materials includes non-standard pro-forma capitalization of routine software maintenance ($4.5M) and speculative vendor rebates ($2.3M).
+Audited GAAP EBITDA for FY2023 is confirmed as $11.2M.
+Investors must rely on audited figures rather than non-GAAP management presentation summaries.
+
